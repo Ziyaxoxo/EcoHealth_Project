@@ -13,6 +13,34 @@ except FileNotFoundError:
 st.set_page_config(page_title="EcoHealth Shield", layout="wide")
 st.title("🌍 EcoHealth Shield: Climate-Risk Intelligence")
 
+# --- Custom CSS for the "White & Purple" Theme ---
+st.markdown("""
+    <style>
+    /* Change the Main Title Color */
+    h1 {
+        color: #6C63FF;
+    }
+    /* Style the Sidebar to be clean */
+    section[data-testid="stSidebar"] {
+        background-color: #F3F0FF;
+    }
+    /* Add "Card" styling to the Metrics */
+    div[data-testid="stMetric"] {
+        background-color: #FFFFFF;
+        border: 1px solid #E0E0E0;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+        text-align: center;
+    }
+    /* Make the text labels purple */
+    div[data-testid="stMetricLabel"] {
+        color: #6C63FF;
+        font-weight: bold;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 # --- Sidebar: Policy Simulator ---
 st.sidebar.header("⚙️ Policy Simulator")
 st.sidebar.markdown("Adjust pollutant levels to predict health risk.")
